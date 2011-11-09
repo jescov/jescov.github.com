@@ -3,9 +3,42 @@
   <head>
     <meta charset='utf-8'>
     <title>{{ page.title }}</title>
+    <link href='style/main.css' rel='stylesheet' type='text/css'>
+    <link href='style/code.css' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <h1>{{ page.header }}</h1>
-    {{ content }}
+    <div id='wrapper'>
+      <div id='menu'>
+        <div class='menuItem'>
+          <a href='index.html'>Introduction</a>
+        </div>
+        <div class='menuItem'>
+          <a href='news.html'>News</a>
+        </div>
+        <div class='menuItem'>
+          <a href='examples.html'>Examples</a>
+        </div>
+        <div class='menuItem'>
+          <a href='downloads.html'>Downloads</a>
+        </div>
+      </div>
+      <div id='main'>
+        <h1 class='header'>{{ page.header }}</h1>
+        <div id='content'>
+          {{ content }}
+        </div>
+      </div>
+      <div id='footer'>
+        <div class='footerItem'>
+          <a href='http://github.com/jescov'>http://github.com/jescov</a>
+        </div>
+        <div class='footerItem'>
+          <a href='http://olabini.com'>http://olabini.com</a>
+        </div>
+        <div class='footerItem'>
+          <a href='http://thoughtworks.com'>http://thoughtworks.com</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

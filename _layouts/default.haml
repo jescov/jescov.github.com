@@ -3,7 +3,30 @@
   %head
     %meta{ :charset => "utf-8" }
     %title {{ page.title }}
+    %link{ :rel => "stylesheet", :href => "style/main.css", :type => "text/css"}
+    %link{ :rel => "stylesheet", :href => "style/code.css", :type => "text/css"}
   %body
-    %h1 {{ page.header }}
-    
-    {{ content }}
+    #wrapper
+      #menu
+        .menuItem
+          %a{:href => "index.html"} Introduction
+        .menuItem
+          %a{:href => "news.html"} News
+        .menuItem
+          %a{:href => "examples.html"} Examples
+        .menuItem 
+          %a{:href => "downloads.html"} Downloads
+
+      #main
+        %h1.header {{ page.header }}
+
+        #content
+          {{ content }}
+
+      #footer
+        .footerItem
+          %a{:href => "http://github.com/jescov"} http://github.com/jescov
+        .footerItem
+          %a{:href => "http://olabini.com"} http://olabini.com
+        .footerItem
+          %a{:href => "http://thoughtworks.com"} http://thoughtworks.com
